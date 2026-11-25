@@ -1,0 +1,52 @@
+:root {
+  color-scheme: dark;
+  font: 16px/1.65 -apple-system, BlinkMacSystemFont, "PingFang SC", "Microsoft YaHei", sans-serif;
+  color: #f5f7fa;
+  background: #111820;
+  --muted: #b4bfca;
+  --line: #35424e;
+  --link: #95d2ff;
+}
+* { box-sizing: border-box; }
+[hidden] { display: none !important; }
+body { margin: 0; }
+.container { width: min(1200px, calc(100% - 72px)); margin-inline: auto; }
+a { color: var(--link); text-underline-offset: .18em; }
+a:hover { color: #d0ecff; }
+:focus-visible { outline: 3px solid #afdfff; outline-offset: 5px; }
+.top { display: flex; justify-content: space-between; align-items: center; gap: 24px; min-height: 76px; border-bottom: 1px solid var(--line); }
+.brand { display: inline-flex; align-items: center; gap: 10px; color: inherit; text-decoration: none; font-size: 1rem; font-weight: 650; }
+.top nav a { color: var(--muted); text-decoration: none; font-size: .9375rem; }
+.top nav a:hover { color: #fff; text-decoration: underline; }
+.hero { display: grid; grid-template-columns: minmax(280px, 1fr) minmax(0, 1.65fr); gap: 54px; align-items: center; padding-block: 74px 72px; }
+.app-icon { display: block; margin-left: -4px; }
+h1, h2, p, figure { margin: 0; }
+h1 { font-size: clamp(2.55rem, 4.4vw, 4rem); font-weight: 720; line-height: 1.2; letter-spacing: -.04em; margin-top: 16px; }
+.intro-copy { margin-top: 16px; font-size: 1.125rem; color: #d4dce5; max-width: 29ch; }
+.download { margin-top: 28px; }
+#requirements, #release-status, figcaption { color: var(--muted); font-size: .9375rem; }
+#release-status { margin-top: 6px; }
+#github-link { display: inline-block; margin-top: 7px; font-size: .9375rem; }
+.action { display: inline-flex; margin-top: 12px; min-height: 46px; align-items: center; padding: 7px 22px; border-radius: 11px; background: #a6dbff; color: #102131; text-decoration: none; font-weight: 700; }
+.action:hover { background: #ceeaff; color: #102131; }
+.product-shot img { display: block; width: 100%; height: auto; border: 1px solid #4b5866; border-radius: 16px; box-shadow: 0 18px 56px #0005; }
+figcaption { margin-top: 12px; }
+.guide { border-block: 1px solid var(--line); padding: 34px 0 42px; scroll-margin-top: 20px; }
+h2 { font-size: clamp(1.6rem, 2.8vw, 2rem); line-height: 1.3; }
+.guide ol { margin: 18px 0; padding-left: 1.6rem; max-width: 68ch; }
+.guide li + li { margin-top: 8px; }
+.notice { max-width: 64ch; margin-block: 22px 16px; padding: 12px 16px; border-inline-start: 3px solid #8ed0ff; background: #1b2835; }
+details { max-width: 68ch; }
+summary { cursor: pointer; font-weight: 650; padding-block: 5px; }
+details p { margin-top: 8px; color: var(--muted); }
+footer { padding: 24px 0 36px; color: var(--muted); font-size: .875rem; }
+@media (max-width: 900px) {
+  .hero { gap: 30px; padding-block: 52px; }
+}
+@media (max-width: 710px) {
+  .container { width: calc(100% - 36px); }
+  .top { min-height: 64px; gap: 12px; }
+  .hero { grid-template-columns: minmax(0, 1fr); padding-block: 36px 42px; }
+  .intro-copy { max-width: 32ch; }
+  .product-shot img { border-radius: 12px; }
+}

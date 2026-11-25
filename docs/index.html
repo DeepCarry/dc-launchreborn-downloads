@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Launch Reborn 是面向 Apple 芯片 Mac 的启动台。全屏浏览、搜索并整理你的应用。">
+  <meta name="theme-color" content="#111820">
+  <title>Launch Reborn · Mac 启动台</title>
+  <link rel="icon" href="./assets/launch-reborn.png">
+  <link rel="stylesheet" href="./styles.css">
+  <script type="module" src="./download.mjs"></script>
+</head>
+<body>
+  <header class="top container">
+    <a class="brand" href="./" aria-label="Launch Reborn 首页">
+      <img src="./assets/launch-reborn.png" alt="" width="32" height="32">
+      <span>Launch Reborn</span>
+    </a>
+    <nav aria-label="页面导航"><a href="#install">安装指南</a></nav>
+  </header>
+
+  <main class="container">
+    <section class="hero" aria-labelledby="title">
+      <div class="intro">
+        <img class="app-icon" src="./assets/launch-reborn.png" alt="" width="72" height="72">
+        <h1 id="title">Mac 启动台</h1>
+        <p class="intro-copy">全屏浏览你的应用。记得位置就点图标，想快速打开就直接搜索。常用应用可以拖进同一个文件夹。</p>
+        <div class="download" aria-label="下载 Launch Reborn">
+          <p id="requirements">Apple 芯片 Mac · macOS 26 或更新版本</p>
+          <a id="download-link" class="action" aria-describedby="requirements release-status" hidden>下载 DMG</a>
+          <p id="release-status">下载暂未开放</p>
+          <a id="github-link" hidden>在 GitHub 查看此版本</a>
+        </div>
+      </div>
+      <figure class="product-shot">
+        <img src="./assets/launcher.jpg" alt="Launch Reborn 全屏启动台，顶部是搜索框，下方是分页排列的应用图标">
+        <figcaption>Launch Reborn 预览界面</figcaption>
+      </figure>
+    </section>
+
+    <section id="install" class="guide" aria-labelledby="guide-title">
+      <h2 id="guide-title">安装 Launch Reborn</h2>
+      <ol>
+        <li>下载并打开 DMG，将 Launch Reborn 拖入「应用程序」。</li>
+        <li>打开应用，在引导里选择触控角、快捷键或触控板捏合等打开方式。</li>
+        <li>若选择触控板捏合，按提示在系统设置中授予辅助功能权限。</li>
+      </ol>
+      <p id="preview-note" class="notice" hidden>这是未公证的开发预览包。macOS 首次打开时可能要求在「系统设置 → 隐私与安全性」手动确认。<a href="https://support.apple.com/zh-cn/102445">Apple 安全打开说明</a></p>
+      <details>
+        <summary>已经装过旧版</summary>
+        <p>升级前先用旧版导出布局备份。新版中的「设置 → 应用与数据 → 恢复布局」可读取兼容的 JSON 备份。恢复前可以预览结果，并备份当前布局。</p>
+        <p>更新时，先退出应用，下载新版 DMG，再将同名应用拖入「应用程序」并选择替换。</p>
+        <p id="preview-layout" hidden>开发预览版使用独立布局，可与现有正式版并存。</p>
+      </details>
+    </section>
+  </main>
+
+  <footer class="container">由 DeepCarry 开发 · <a href="https://github.com/DeepCarry/dc-launchreborn-downloads/blob/main/PRIVACY.md">隐私政策</a></footer>
+</body>
+</html>
